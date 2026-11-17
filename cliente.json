@@ -1,0 +1,796 @@
+{
+ "$schema": "./docs/cliente.schema.json",
+ "id": "isola-nordelta",
+ "nombre": "ISOLA",
+ "pais": "AR",
+ "idioma": "es",
+ "modo": "demo",
+ "whatsapp": "5491156403389",
+ "instagram": "isolaresto",
+ "prefijoPedido": "IS",
+ "supabase": {
+  "url": "",
+  "anonKey": ""
+ },
+ "marca": {
+  "logo": "img/logo.svg",
+  "logoPanel": "img/logo-cal.svg",
+  "colores": {
+   "fondo": "#F2EBE0",
+   "superficie": "#FAF6EF",
+   "texto": "#14313A",
+   "primario": "#0F4A5C",
+   "acento": "#D6A13A",
+   "borde": "#D8CDB9"
+  },
+  "fuentes": {
+   "titulos": "'Pathway Gothic One', 'Arial Narrow', sans-serif",
+   "texto": "'Alegreya Sans', system-ui, sans-serif",
+   "googleFonts": ""
+  },
+  "estilo": {
+   "forma": "recta",
+   "sombra": "suave",
+   "borde": "1px",
+   "mayusculas": false
+  }
+ },
+ "modulos": {
+  "carta": true,
+  "carrito": false,
+  "reservas": true,
+  "admin": true
+ },
+ "horarios": {
+  "lun": [],
+  "mar": [
+   [
+    "12:00",
+    "00:00"
+   ]
+  ],
+  "mie": [
+   [
+    "12:00",
+    "00:00"
+   ]
+  ],
+  "jue": [
+   [
+    "12:00",
+    "00:00"
+   ]
+  ],
+  "vie": [
+   [
+    "12:00",
+    "00:00"
+   ]
+  ],
+  "sab": [
+   [
+    "12:00",
+    "00:00"
+   ]
+  ],
+  "dom": [
+   [
+    "12:00",
+    "16:00"
+   ]
+  ]
+ },
+ "reservas": {
+  "capacidad": 80,
+  "maxPersonas": 12,
+  "anticipacionMin": 60,
+  "diasAdelante": 30,
+  "duracionMin": 105,
+  "servicios": [
+   {
+    "id": "mediodia",
+    "nombre": "Mediodía",
+    "dias": [
+     "mar",
+     "mie",
+     "jue",
+     "vie",
+     "sab",
+     "dom"
+    ],
+    "tandas": [
+     {
+      "nombre": "Mediodía",
+      "turnos": [
+       "12:00",
+       "12:30",
+       "13:00",
+       "13:30",
+       "14:00",
+       "14:30",
+       "15:00"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "merienda",
+    "nombre": "Merienda",
+    "dias": [
+     "mar",
+     "mie",
+     "jue",
+     "vie",
+     "sab"
+    ],
+    "tandas": [
+     {
+      "nombre": "Merienda",
+      "turnos": [
+       "16:00",
+       "16:30",
+       "17:00",
+       "17:30",
+       "18:00",
+       "18:30"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "cena",
+    "nombre": "Cena",
+    "dias": [
+     "mar",
+     "mie",
+     "jue",
+     "vie",
+     "sab"
+    ],
+    "tandas": [
+     {
+      "nombre": "Cena",
+      "turnos": [
+       "20:00",
+       "20:30",
+       "21:00",
+       "21:30",
+       "22:00",
+       "22:30",
+       "23:00"
+      ]
+     }
+    ]
+   }
+  ],
+  "extras": [
+   {
+    "id": "cumple",
+    "label": "Venimos a festejar un cumpleaños"
+   },
+   {
+    "id": "afuera",
+    "label": "Preferimos afuera, en la terraza"
+   }
+  ]
+ },
+ "pagos": {
+  "mercadopago": {
+   "endpoint": "https://kit-demos-amf.vercel.app/api/mp-preference",
+   "modo": "sandbox"
+  }
+ },
+ "carta": {
+  "categorias": [
+   {
+    "id": "platillos",
+    "nombre": "Platillos"
+   },
+   {
+    "id": "ensaladas",
+    "nombre": "Ensaladas"
+   },
+   {
+    "id": "principales",
+    "nombre": "Principales"
+   },
+   {
+    "id": "acompanamientos",
+    "nombre": "Acompañamientos"
+   },
+   {
+    "id": "postres",
+    "nombre": "Postres"
+   },
+   {
+    "id": "estacion",
+    "nombre": "De estación",
+    "bajada": "Primavera"
+   },
+   {
+    "id": "lunch",
+    "nombre": "Lunch by ISOLA",
+    "bajada": "Martes a viernes al mediodía"
+   },
+   {
+    "id": "merienda",
+    "nombre": "Merienda"
+   }
+  ],
+  "productos": [
+   {
+    "id": "soupe-a-loignon",
+    "categoria": "platillos",
+    "nombre": "Soupe à l’Oignon",
+    "descripcion": "Sopa de cebolla. Jerez. Pan tostado. Queso gruyère.",
+    "precio": 22800
+   },
+   {
+    "id": "gambas-de-ajillo",
+    "categoria": "platillos",
+    "nombre": "Gambas de Ajillo",
+    "descripcion": "Langostinos. Aceite de oliva. Ajo. Pimentón.",
+    "precio": 31200,
+    "foto": "img/p-gambas-640.webp"
+   },
+   {
+    "id": "cannoli-de-trucha",
+    "categoria": "platillos",
+    "nombre": "Cannoli de Trucha",
+    "descripcion": "Tartare de trucha. Salsa ponzu. Aderezo de palta y yogur. Sriracha de remolacha.",
+    "precio": 20200
+   },
+   {
+    "id": "girgolas",
+    "categoria": "platillos",
+    "nombre": "Gírgolas",
+    "descripcion": "Gírgolas. Crema de castañas de cajú. Queso brie. Crumble de avellanas. Huevo poché.",
+    "precio": 22600
+   },
+   {
+    "id": "croquetas",
+    "categoria": "platillos",
+    "nombre": "Croquetas",
+    "descripcion": "Cebolla caramelizada. Queso de cabra. Mayonesa de ajos asados.",
+    "precio": 18900
+   },
+   {
+    "id": "atun-rojo",
+    "categoria": "platillos",
+    "nombre": "Atún Rojo",
+    "descripcion": "Atún rojo. Palta. Mango. Cilantro. Miel de sésamo picante. Crocante de arroz.",
+    "precio": 28800,
+    "foto": "img/p-atun-640.webp"
+   },
+   {
+    "id": "chipirones",
+    "categoria": "platillos",
+    "nombre": "Chipirones",
+    "descripcion": "Chipirones. Papa. Nduja. Cebolla encurtida.",
+    "precio": 28000
+   },
+   {
+    "id": "milhojas-trufada",
+    "categoria": "platillos",
+    "nombre": "Milhojas Trufada",
+    "descripcion": "Milhojas de papas trufadas. Espuma de pecorino. Puerro quemado.",
+    "precio": 25800
+   },
+   {
+    "id": "burrata",
+    "categoria": "platillos",
+    "nombre": "Burrata",
+    "descripcion": "Tomates cherry confitados en aceto balsámico. Gremolata. Tostada. Recomendado con anchoas. Opción sin gluten.",
+    "precio": 32000,
+    "etiquetas": [
+     "Sin gluten"
+    ],
+    "foto": "img/p-burrata-640.webp"
+   },
+   {
+    "id": "pollo-crocante",
+    "categoria": "ensaladas",
+    "nombre": "Pollo Crocante",
+    "descripcion": "Pollo al panko. Lechuga. Tomates secos. Queso gruyère. Sésamo. Nueces garrapiñadas. Aderezo mostaza y miel.",
+    "precio": 28200
+   },
+   {
+    "id": "ensalada-de-atun-rojo",
+    "categoria": "ensaladas",
+    "nombre": "Ensalada de Atún Rojo",
+    "descripcion": "Atún rojo. Pak choi. Repollo colorado. Palta. Tomate cherry. Zanahoria encurtida. Maní picante. Semillas de sésamo. Aderezo a base de salsa de soja.",
+    "precio": 31000,
+    "etiquetas": [
+     "Sin gluten"
+    ]
+   },
+   {
+    "id": "cous-cous",
+    "categoria": "ensaladas",
+    "nombre": "Cous-Cous",
+    "descripcion": "Cous-cous. Vegetales grillados. Palta. Huevo poché.",
+    "precio": 25200
+   },
+   {
+    "id": "quinoa-trucha-ahumada",
+    "categoria": "ensaladas",
+    "nombre": "Quinoa, Trucha Ahumada",
+    "descripcion": "Quinoa roja y blanca. Pepino. Palta. Alcaparras. Trucha ahumada.",
+    "precio": 31000,
+    "etiquetas": [
+     "Sin gluten"
+    ]
+   },
+   {
+    "id": "chernia-mediterranea",
+    "categoria": "principales",
+    "nombre": "Chernia Mediterránea",
+    "descripcion": "Chernia. Tomates cherry. Olivas negras. Alcaparras.",
+    "precio": 41000,
+    "etiquetas": [
+     "Sin gluten"
+    ]
+   },
+   {
+    "id": "tagliatelle-con-hongos",
+    "categoria": "principales",
+    "nombre": "Tagliatelle con Hongos",
+    "descripcion": "Pasta al huevo. Ragú de hongos. Castañas de cajú.",
+    "precio": 28800
+   },
+   {
+    "id": "ossobuco",
+    "categoria": "principales",
+    "nombre": "Ossobuco",
+    "descripcion": "750 g de ossobuco con hueso braseado al vino tinto. Puré de papas.",
+    "precio": 46000,
+    "etiquetas": [
+     "Sin gluten"
+    ]
+   },
+   {
+    "id": "paella-de-mariscos",
+    "categoria": "principales",
+    "nombre": "Paella de Mariscos",
+    "descripcion": "Arroz bomba. Frutos de mar. Crema de ajos asados. Para dos personas.",
+    "precio": 61000,
+    "etiquetas": [
+     "Sin gluten"
+    ]
+   },
+   {
+    "id": "agnolotti-trufado",
+    "categoria": "principales",
+    "nombre": "Agnolotti Trufado",
+    "descripcion": "Carrillera braseada. Demi-glace. Marsala. Avellanas. Parmesano. Aceite de trufa. Panceta crocante.",
+    "precio": 38200,
+    "foto": "img/p-agnolotti-640.webp"
+   },
+   {
+    "id": "risotto-nero",
+    "categoria": "principales",
+    "nombre": "Risotto Nero",
+    "descripcion": "Arroz carnaroli. Tinta de calamar. Calamares. Mejillones. Langostinos. Chipirones. Mayonesa de pescado.",
+    "precio": 41500,
+    "etiquetas": [
+     "Sin gluten"
+    ]
+   },
+   {
+    "id": "ojo-de-bife-con-hueso",
+    "categoria": "principales",
+    "nombre": "Ojo de Bife con Hueso",
+    "descripcion": "Rack de 500 g ahumado.",
+    "precio": 54000,
+    "etiquetas": [
+     "Sin gluten"
+    ]
+   },
+   {
+    "id": "pulpo-espanol",
+    "categoria": "principales",
+    "nombre": "Pulpo Español",
+    "descripcion": "Pulpo cocido a baja temperatura. Mayonesa de pulpo. Acompañamiento: garbanzo, papa y panceta o papas fritas.",
+    "precio": 79600,
+    "etiquetas": [
+     "Sin gluten"
+    ],
+    "foto": "img/p-pulpo-640.webp"
+   },
+   {
+    "id": "trucha-miso",
+    "categoria": "principales",
+    "nombre": "Trucha Miso",
+    "descripcion": "Trucha. Miso beurre blanc. Chauchas. Arvejas.",
+    "precio": 39500
+   },
+   {
+    "id": "pure-de-papa",
+    "categoria": "acompanamientos",
+    "nombre": "Puré de Papa",
+    "descripcion": "",
+    "precio": 11000,
+    "etiquetas": [
+     "Sin gluten"
+    ]
+   },
+   {
+    "id": "papas-fritas",
+    "categoria": "acompanamientos",
+    "nombre": "Papas Fritas",
+    "descripcion": "",
+    "precio": 13000
+   },
+   {
+    "id": "papas-fritas-aceite-de-trufa-y-parmesano",
+    "categoria": "acompanamientos",
+    "nombre": "Papas Fritas, Aceite de Trufa y Parmesano",
+    "descripcion": "",
+    "precio": 18000
+   },
+   {
+    "id": "aceite-de-trufa",
+    "categoria": "acompanamientos",
+    "nombre": "Aceite de Trufa",
+    "descripcion": "",
+    "precio": 7000
+   },
+   {
+    "id": "rucula-parmesano",
+    "categoria": "acompanamientos",
+    "nombre": "Rúcula Parmesano",
+    "descripcion": "",
+    "precio": 12000,
+    "etiquetas": [
+     "Sin gluten"
+    ]
+   },
+   {
+    "id": "ensalada-mixta",
+    "categoria": "acompanamientos",
+    "nombre": "Ensalada Mixta",
+    "descripcion": "",
+    "precio": 12000,
+    "etiquetas": [
+     "Sin gluten"
+    ]
+   },
+   {
+    "id": "rucula-parmesano-y-tomates-cherry",
+    "categoria": "acompanamientos",
+    "nombre": "Rúcula, Parmesano y Tomates Cherry",
+    "descripcion": "",
+    "precio": 14000,
+    "etiquetas": [
+     "Sin gluten"
+    ]
+   },
+   {
+    "id": "chocolate-y-caramelo",
+    "categoria": "postres",
+    "nombre": "Chocolate y Caramelo",
+    "descripcion": "Bizcocho húmedo de chocolate. Caramelo salado. Mousse de chocolate.",
+    "precio": 17000
+   },
+   {
+    "id": "mousse-de-chocolate",
+    "categoria": "postres",
+    "nombre": "Mousse de Chocolate",
+    "descripcion": "Chocolate belga. Pistacho. Aceite de oliva extra virgen. Sal en escamas.",
+    "precio": 18000,
+    "etiquetas": [
+     "Sin gluten"
+    ]
+   },
+   {
+    "id": "creme-brulee",
+    "categoria": "postres",
+    "nombre": "Crème Brûlée",
+    "descripcion": "Crème brûlée de avellanas. Frangelico. Frutos rojos.",
+    "precio": 15000,
+    "etiquetas": [
+     "Sin gluten"
+    ]
+   },
+   {
+    "id": "key-lime-pie",
+    "categoria": "postres",
+    "nombre": "Key Lime Pie",
+    "descripcion": "Masa sablé. Crema de lima. Gelificado de lima. Crema batida.",
+    "precio": 15000
+   },
+   {
+    "id": "panqueque",
+    "categoria": "postres",
+    "nombre": "Panqueque",
+    "descripcion": "Panqueque de dulce de leche. Helado de vainilla.",
+    "precio": 15000
+   },
+   {
+    "id": "cheesecake",
+    "categoria": "postres",
+    "nombre": "Cheesecake",
+    "descripcion": "Tarta de queso. Harina de almendras. Frutos rojos.",
+    "precio": 15000,
+    "etiquetas": [
+     "Sin gluten"
+    ]
+   },
+   {
+    "id": "tiramisu",
+    "categoria": "postres",
+    "nombre": "Tiramisú",
+    "descripcion": "Tiramisú clásico.",
+    "precio": 16200
+   },
+   {
+    "id": "estacion-crudo-de-lenguado",
+    "categoria": "estacion",
+    "nombre": "Crudo de Lenguado",
+    "descripcion": "Lenguado. Aguachile de palta. Aguachile de remolacha. Caviar de pomelo. Cebolla morada. Maíz frito.",
+    "precio": 22300,
+    "etiquetas": [
+     "Sin gluten"
+    ]
+   },
+   {
+    "id": "estacion-mollejas",
+    "categoria": "estacion",
+    "nombre": "Mollejas",
+    "descripcion": "Molleja. Salsa harissa (picante). Peras. Miel. Cebolla. Avellanas. Dátiles.",
+    "precio": 23500
+   },
+   {
+    "id": "estacion-robalo-relleno",
+    "categoria": "estacion",
+    "nombre": "Róbalo Relleno",
+    "descripcion": "Róbalo. Mousse de langostino. Crema de espinaca. Puré de repollo. Brócoli. Coliflor. Espárragos. Alcauciles.",
+    "precio": 42200,
+    "etiquetas": [
+     "Sin gluten"
+    ]
+   },
+   {
+    "id": "estacion-spaghetti-alle-vongole",
+    "categoria": "estacion",
+    "nombre": "Spaghetti Alle Vongole",
+    "descripcion": "Pasta fresca. Almejas. Vino blanco. Ajo. Perejil.",
+    "precio": 32000
+   },
+   {
+    "id": "estacion-anana-y-chocolate-blanco",
+    "categoria": "estacion",
+    "nombre": "Ananá y Chocolate Blanco",
+    "descripcion": "Ananá al ron. Mousse de chocolate blanco. Gel de maracuyá. Crumble de coco. Sorbet de ananá y lima.",
+    "precio": 15600
+   },
+   {
+    "id": "estacion-hamburguesa-isola",
+    "categoria": "estacion",
+    "nombre": "Hamburguesa ISOLA",
+    "descripcion": "Sábados y domingos al mediodía. Pan de papa. Blend de ojo de bife y bife de chorizo. Queso raclette. Lechuga. Tomate. Cebolla morada. Pepinillos. Salsa ISOLA. Papas fritas.",
+    "precio": 28500
+   },
+   {
+    "id": "lunch-menu-lunch",
+    "categoria": "lunch",
+    "nombre": "Menú Lunch",
+    "descripcion": "Principal + platito o postre + bebida + café. Con platito y postre: $36.900.",
+    "precio": 34400,
+    "foto": "img/p-lunch-640.webp"
+   },
+   {
+    "id": "lunch-bunuelos",
+    "categoria": "lunch",
+    "nombre": "Buñuelos",
+    "descripcion": "Platito. Espinaca. Mayonesa de ajos asados y berenjena ahumada.",
+    "precio": null
+   },
+   {
+    "id": "lunch-polenta-pomodoro",
+    "categoria": "lunch",
+    "nombre": "Polenta & Pomodoro",
+    "descripcion": "Platito. Pesto de tomates secos. Pesto de albahaca.",
+    "precio": null
+   },
+   {
+    "id": "lunch-ricota-casera",
+    "categoria": "lunch",
+    "nombre": "Ricota Casera",
+    "descripcion": "Platito. Remolacha asada. Naranja. Hinojo. Castañas caramelizadas.",
+    "precio": null,
+    "etiquetas": [
+     "Sin gluten"
+    ]
+   },
+   {
+    "id": "lunch-bife-de-chorizo",
+    "categoria": "lunch",
+    "nombre": "Bife de Chorizo",
+    "descripcion": "Guarnición a elección: ensalada rúcula parmesano o papas fritas. Upgrade a ojo de bife: $6.500.",
+    "precio": null,
+    "foto": "img/p-bife-640.webp"
+   },
+   {
+    "id": "lunch-pesca-del-dia",
+    "categoria": "lunch",
+    "nombre": "Pesca del Día",
+    "descripcion": "Puré de zanahoria. Hinojo asado. Chauchas.",
+    "precio": null,
+    "etiquetas": [
+     "Sin gluten"
+    ]
+   },
+   {
+    "id": "lunch-orecchiette",
+    "categoria": "lunch",
+    "nombre": "Orecchiette",
+    "descripcion": "Zucchini. Parmesano. Pangrattato.",
+    "precio": null
+   },
+   {
+    "id": "lunch-ensalada-cesar",
+    "categoria": "lunch",
+    "nombre": "Ensalada César",
+    "descripcion": "Lechuga. Crutones. Parmesano. Pollo. Polvo de panceta.",
+    "precio": null,
+    "foto": "img/p-cesar-640.webp"
+   },
+   {
+    "id": "lunch-quiche-de-pollo-y-puerro",
+    "categoria": "lunch",
+    "nombre": "Quiche de Pollo y Puerro",
+    "descripcion": "Masa quebrada. Pollo. Puerro. Hojas verdes. Tomate cherry. Cebolla morada.",
+    "precio": null
+   },
+   {
+    "id": "lunch-panqueque",
+    "categoria": "lunch",
+    "nombre": "Panqueque",
+    "descripcion": "Postre. Panqueque de dulce de leche. Helado de vainilla.",
+    "precio": null
+   },
+   {
+    "id": "lunch-flan",
+    "categoria": "lunch",
+    "nombre": "Flan",
+    "descripcion": "Postre. Flan. Dulce de leche.",
+    "precio": null,
+    "etiquetas": [
+     "Sin gluten"
+    ]
+   },
+   {
+    "id": "merienda-tostada-con-palta",
+    "categoria": "merienda",
+    "nombre": "Tostada con Palta",
+    "descripcion": "Pan. Palta. Tomate cherry. Huevo pochado.",
+    "precio": 10800
+   },
+   {
+    "id": "merienda-tostada-con-huevo",
+    "categoria": "merienda",
+    "nombre": "Tostada con Huevo",
+    "descripcion": "Pan. Huevos revueltos. Panceta.",
+    "precio": 10800
+   },
+   {
+    "id": "merienda-tostada-con-trucha",
+    "categoria": "merienda",
+    "nombre": "Tostada con Trucha",
+    "descripcion": "Pan. Trucha ahumada. Crema ácida. Rabanito. Eneldo.",
+    "precio": 14000,
+    "foto": "img/p-tostada-640.webp"
+   },
+   {
+    "id": "merienda-scons-de-queso",
+    "categoria": "merienda",
+    "nombre": "Scons de Queso",
+    "descripcion": "Scons. Queso crema. Mermelada casera.",
+    "precio": 7500
+   },
+   {
+    "id": "merienda-shakshuka",
+    "categoria": "merienda",
+    "nombre": "Shakshuka",
+    "descripcion": "Tomate. Pimentón. Cebolla. Especias. Huevo frito. Pan. Opción sin gluten.",
+    "precio": 13700,
+    "etiquetas": [
+     "Sin gluten"
+    ]
+   },
+   {
+    "id": "merienda-arepa-y-palta",
+    "categoria": "merienda",
+    "nombre": "Arepa y Palta",
+    "descripcion": "Arepa de maíz. Palta. Panceta. Huevo pochado.",
+    "precio": 11200,
+    "etiquetas": [
+     "Sin gluten"
+    ]
+   },
+   {
+    "id": "merienda-arepa-y-trufa",
+    "categoria": "merienda",
+    "nombre": "Arepa y Trufa",
+    "descripcion": "Arepa de maíz. Rúcula. Huevo pochado. Pecorino. Panceta. Aceite de trufa.",
+    "precio": 12200,
+    "etiquetas": [
+     "Sin gluten"
+    ]
+   },
+   {
+    "id": "merienda-tostado",
+    "categoria": "merienda",
+    "nombre": "Tostado",
+    "descripcion": "Pan brioche. Jamón cocido. Mozzarella.",
+    "precio": 10500
+   },
+   {
+    "id": "merienda-yogur-y-granola",
+    "categoria": "merienda",
+    "nombre": "Yogur y Granola",
+    "descripcion": "Yogur casero. Granola. Fruta de estación.",
+    "precio": 11400,
+    "etiquetas": [
+     "Sin gluten"
+    ]
+   },
+   {
+    "id": "merienda-waffles",
+    "categoria": "merienda",
+    "nombre": "Waffles",
+    "descripcion": "Waffles. Frutos rojos. Nutella. Dulce de leche.",
+    "precio": 11600
+   },
+   {
+    "id": "merienda-tostada-francesa",
+    "categoria": "merienda",
+    "nombre": "Tostada Francesa",
+    "descripcion": "Tostada húmeda. Frutos rojos. Crema batida. Miel.",
+    "precio": 12200
+   },
+   {
+    "id": "merienda-torta-de-chocolate",
+    "categoria": "merienda",
+    "nombre": "Torta de Chocolate",
+    "descripcion": "Bizcocho de chocolate. Dulce de leche. Frosting de cacao y queso crema. Para compartir.",
+    "precio": 15700,
+    "foto": "img/p-torta-640.webp"
+   },
+   {
+    "id": "merienda-alfajor-de-almendra",
+    "categoria": "merienda",
+    "nombre": "Alfajor de Almendra",
+    "descripcion": "Alfajor con dulce de leche. Almendras.",
+    "precio": 4600,
+    "foto": "img/p-alfajor-640.webp"
+   },
+   {
+    "id": "merienda-scons-dulces",
+    "categoria": "merienda",
+    "nombre": "Scons Dulces",
+    "descripcion": "Scons. Queso crema. Mermelada casera.",
+    "precio": 7500
+   },
+   {
+    "id": "merienda-torta-de-nuez",
+    "categoria": "merienda",
+    "nombre": "Torta de Nuez",
+    "descripcion": "Torta húmeda de nuez. Dulce de leche. Crema batida. Frutillas.",
+    "precio": 10200,
+    "etiquetas": [
+     "Sin gluten"
+    ]
+   }
+  ]
+ },
+ "textos": {
+  "reservar": "Reservar",
+  "reservarMesa": "Reservá tu mesa",
+  "servicio": "Momento",
+  "comentario": "Algo que tengamos que saber (alergias, silla para bebé…)",
+  "reservaListaSub": "{personas} · {dia} a las {hora}. Te confirmamos por WhatsApp. Te esperamos con el vermouth de cortesía.",
+  "sinGluten": "Sin gluten"
+ }
+}
